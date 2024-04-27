@@ -6,7 +6,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ShoppingCart {
-    private List<Item> items;
+    private final List<Item> items;
+
 
     public ShoppingCart() {
         items = new ArrayList<>();
@@ -20,17 +21,9 @@ public class ShoppingCart {
         items.remove(item);
     }
 
-    public void calculateTotalPrice() {
-        double totalPrice = 0;
-        for (Item item : items) {
-            totalPrice += item.getP();
-        }
-        System.out.println("Total Price: " + totalPrice);
-    }
-
     public void printItems() {
         for (Item item : items) {
-            System.out.println(item.getN() + " - $" + item.getP());
+            System.out.println(item.getNome() + " - $" + item.getPreco());
         }
     }
 
@@ -38,7 +31,4 @@ public class ShoppingCart {
         // Lógica para salvar o carrinho de compras no banco de dados
     }
 
-    public void sendConfirmationEmail() {
-        // Lógica para enviar um e-mail de confirmação do carrinho de compras
-    }
 }

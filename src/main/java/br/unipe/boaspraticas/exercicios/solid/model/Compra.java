@@ -6,8 +6,19 @@ import java.util.List;
 
 @Data
 public class Compra {
-    private List<ItemCompra> i;   //Lista de itens
-    private double desc; //desconto a ser aplicado
+    private List<ItemCompra> itens;   //Lista de itens
+    private Desconto desconto; //desconto a ser aplicado
 
-    // getters e setters omitidos
+    public Compra(List<ItemCompra> itens, Desconto desconto) {
+        this.itens = itens;
+        this.desconto = desconto;
+    }
+
+    public double calcularTotal(){
+        double total = 0;
+        for(ItemCompra item : itens) {
+            total += item.getPrecoTotal();
+        }
+        return desconto.descontoAplicado(total);
+    }
 }

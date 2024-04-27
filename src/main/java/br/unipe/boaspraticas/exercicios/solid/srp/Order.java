@@ -20,7 +20,7 @@ public class Order {
     public void calculateTotalPrice() {
         double total = 0;
         for (Item item : items) {
-            total += item.getP();
+            total += item.getPreco();
         }
         System.out.println("Total Price: " + total);
     }

@@ -1,6 +1,9 @@
 package br.unipe.boaspraticas.exercicios.solid.lsp.pessoas;
 
-class Pessoa {
+import lombok.Getter;
+
+@Getter
+class Pessoa implements FazerSom{
     private String nome;
 
     public Pessoa(String nome) {
@@ -11,6 +14,7 @@ class Pessoa {
         return nome;
     }
 
+    @Override
     public void fazerSom() {
         System.out.println("Oi!");
     }

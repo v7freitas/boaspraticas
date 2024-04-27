@@ -5,9 +5,9 @@ import lombok.Data;
 
 @Data
 public class ItemCompra {
-    private String n;  //NOME da pessoa realizando compra
+    private String nome;  //NOME da pessoa realizando compra
 
-    private double pu; //Preço da compra
-    private int qtd;  // Quantidade de itens
+    private double precoTotal; //Preço da compra
+    private int quantidade;  // Quantidade de itens
 
 }

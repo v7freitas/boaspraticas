@@ -5,6 +5,6 @@ import lombok.Data;
 @Data
 public class Item {
 
-    private Double p;  // Preço do item
-    private String n;  //nome do item
+    private Double preco;  // Preço do item
+    private String nome;  //nome do item
 }
